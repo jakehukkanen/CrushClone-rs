@@ -1,0 +1,15 @@
+[package]
+name = "crushclone-rs"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+description = "CrushClone-rs: Zero-allocation VST3 and CLAP distortion, filter, and compressor plugin"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[dependencies]
+crushclone-dsp = { path = "../crushclone-dsp" }
+nih_plug = { git = "https://github.com/robbert-vdh/nih-plug.git", features = ["assert_process_allocs", "standalone"] }
+nih_plug_vizia = { git = "https://github.com/robbert-vdh/nih-plug.git" }
